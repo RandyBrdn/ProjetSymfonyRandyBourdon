@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+
+  {% if Erreur is defined %}
+      <div class="alert alert-danger">
+      <p> Adresse mail déjà utilisée </p>
+    </div>
+  {% endif %}
+  
+
+  <div class="row ">
+      <h1>Inscription</h1>
+      <hr>
+        <div class="column large-12 tab-12">
+                {{form(form)}}
+        </div>
+    </div>
+{% endblock %}
